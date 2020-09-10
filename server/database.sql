@@ -1,4 +1,4 @@
-CREATE DATA currencies
+CREATE DATABASE currencies
 
 CREATE TABLE currency(
   currency_id SERIAL PRIMARY KEY,

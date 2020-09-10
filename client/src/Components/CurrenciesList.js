@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { getCurrenciesList, getCurrencyRate } from "../Api/index.js";
+import { getCurrenciesList, getCurrencyRate } from "../Api/Index.js";
 
 const CurrenciesList = () => {
   const [currenciesList, setCurrenciesList] = useState([]);
@@ -12,9 +12,12 @@ const CurrenciesList = () => {
     try {
       const response = await getCurrenciesList();
       const currenciesList = response.map((item) => item[1]);
+
+      console.log(currenciesList);
       const defaultCurrency = currenciesList[0].Ccy[0];
 
       setCurrenciesList(currenciesList);
+      //setCurrenciesList(response);
       setCurrency(defaultCurrency);
     } catch (err) {
       console.error(err.message);
@@ -44,6 +47,7 @@ const CurrenciesList = () => {
         type="number"
         onChange={(e) => setAmount(e.target.value)}
         placeholder="e.g. 10"
+        onKeyDown={(evt) => evt.key === "e" && evt.preventDefault()}
       />
       <label className="list-group-item font-weight-bold">Convert to:</label>
       <select
