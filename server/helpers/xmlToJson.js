@@ -1,16 +1,19 @@
- const xmlToJson(url, callback) {
-  const req = http.get(url,  (res) => {
+const http = require("http");
+const parseString = require("xml2js").parseString;
+
+const xmlToJson = (url, callback) => {
+  const req = http.get(url, (res) => {
     let xml = "";
 
-    res.on("data",  (chunk) => {
+    res.on("data", (chunk) => {
       xml += chunk;
     });
 
-    res.on("error",  (e) => {
+    res.on("error", (e) => {
       callback(e, null);
     });
 
-    res.on("timeout",  (e) => {
+    res.on("timeout", (e) => {
       callback(e, null);
     });
 
@@ -20,7 +23,6 @@
       });
     });
   });
-}
+};
 
-
-export default xmlToJson;
+module.exports = xmlToJson;
