@@ -4,6 +4,8 @@ Converts from EUR to other currencies.
 
 Rates fetched from external API of Lietuvos Bankas. 
 
+![alt text](https://github.com/JustinaJur/memory-game-with-image-gallery/blob/master/images/converter.png)
+
 
 # Technologies used
 
