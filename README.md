@@ -1,11 +1,8 @@
-# currency-converter PERN
+# Currency-converter PERN
 
 Converts from EUR to other currencies. 
 
 Rates fetched from external API of Lietuvos Bankas. 
-
-![alt text](https://github.com/JustinaJur/currency-converter/edit/master/images/converter.png)
-
 
 # Technologies used
 
