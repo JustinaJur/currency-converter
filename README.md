@@ -4,8 +4,6 @@ Converts from EUR to other currencies.
 
 Rates fetched from external API of Lietuvos Bankas.
 
-![alt text](https://github.com/JustinaJur/currency-converter/blob/master/images/converter.png)
-
 # Technologies used
 
 Front: React, Bootstrap,
