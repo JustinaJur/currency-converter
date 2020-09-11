@@ -1,7 +1,7 @@
 CREATE DATABASE currencies
 
 CREATE TABLE currency(
-  currency_id SERIAL PRIMARY KEY,
+  currency_id SERIAL,
   currency_name VARCHAR(50) UNIQUE NOT NULL,
   currency_rate VARCHAR(15) NOT NULL
 ) 
