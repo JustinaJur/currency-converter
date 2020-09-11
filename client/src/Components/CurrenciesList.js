@@ -6,18 +6,15 @@ const CurrenciesList = () => {
   const [currenciesList, setCurrenciesList] = useState([]);
   const [selectedCurrency, setCurrency] = useState("");
   const [enteredAmount, setAmount] = useState(0);
-  const [result, setResult] = useState(null);
+  const [result, setResult] = useState(0);
 
   const getCurrencies = async () => {
     try {
       const response = await getCurrenciesList();
       const currenciesList = response.map((item) => item[1]);
-
-      console.log(currenciesList);
       const defaultCurrency = currenciesList[0].Ccy[0];
 
       setCurrenciesList(currenciesList);
-      //setCurrenciesList(response);
       setCurrency(defaultCurrency);
     } catch (err) {
       console.error(err.message);

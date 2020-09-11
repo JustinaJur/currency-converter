@@ -34,22 +34,7 @@ getCurrencyRate = async (req, res) => {
   }
 };
 
-getCountriesList = async (req, res) => {
-  const url =
-    "http://www.lb.lt/webservices/FxRates/FxRates.asmx/getCurrencyList";
-  xmlToJson(url, async (err, data) => {
-    if (err) {
-      return console.err(err);
-    }
-
-    //a.CcyTbl.CcyNtry.map(item => item.CcyNm[1])
-
-    res.json(data);
-  });
-};
-
 module.exports = {
   getCurrenciesRates,
   getCurrencyRate,
-  //getCountriesList,
 };
